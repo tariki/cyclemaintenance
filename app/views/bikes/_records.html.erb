@@ -1,0 +1,17 @@
+<h3>Maintenance records</h3>
+<table class="record-info">
+  <%= will_paginate(@records) %>
+  <% if @records.empty? %>
+    No maintenance records.
+  <% else %>
+    <% @records.each do |record| %>
+      <tr>
+        <td class="record">
+          <span class="content"><%= record.content %></span>
+          <span class="timestamp"><%= record.maintain_at %></span>
+        </td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+

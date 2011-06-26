@@ -1,0 +1,451 @@
+/* Layout */
+.container {
+	width: 950px;
+}
+
+body {
+	background: #006fe5;
+}
+
+#header {
+	padding-top: 20px;
+}
+
+#header img {
+	padding: 1em;
+	background: #ffffff;
+}
+
+#content {
+	margin-top: 1em;
+	font-size: 120%;
+	padding: 20px;
+	background: #ffffff;
+}
+
+#footer {
+	text-align: center;
+	margin-top: 20px;
+	width: 950px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#footer .navigation {
+	float: none;
+}
+
+/* Links */
+
+a {
+	color: #09c;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #069;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #069;
+}
+
+/* Navigation */
+
+.navigation {
+	float: right;
+}
+
+.navigation {
+	background-color: white;
+	padding: 0 0.7em;
+	white-space: nowrap;
+}
+
+ul.navigation {
+	margin: 0;
+}
+
+.navigation li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 0.2em 0;
+}
+
+.navigation li a {
+	padding: 0 5px;
+	font-weight: bold;
+}
+
+.navigation li a:visited {
+	color: #09c;
+}
+
+.navigation li a:hover {
+	text-decoration: underline;
+}
+
+/* Sign up button */
+
+a.signup_button {
+	line-height: 300%;
+	margin-left: auto;
+	margin-right: auto;
+	display: inline;
+	text-align: center;
+	color: #ffffff;
+	background: #ff2408;
+	font-size: 150%;
+	font-weight: bold;
+	padding: 20px;
+}
+
+/* Edit button */
+
+a.edit_button {
+	line-height: 150%;
+	margin-left: auto;
+	margin-right: 5px;
+	display: inline;
+	text-align: center;
+	background: #d3d3d3;
+	font-weight: bold;
+	padding: 5px;
+}
+
+/* Round corners */
+
+.round {
+	-moz-border-radius:    10px;
+	-webkit-border-radius: 10px;
+	border-radius:         10px;
+}
+
+/* Forms */
+
+div.field, div.actions {
+	margin-bottom: 10px;
+}
+
+.fieldWithErrors {
+	padding: 2px;
+	background-color: red;
+	display: table;
+}
+
+.fieldWithErrors label {
+	color: #fff;
+}
+
+#errorExplanation {
+	width: 400px;
+	border: 2px solid red;
+	padding: 7px;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	font-size: 12px;
+	margin: -7px;
+	background-color: #c00;
+	color: #fff;
+}
+
+#errorExplanation p {
+	color: #333;
+	margin-bottom: 0;
+	padding: 5px;
+}
+
+#errorExplanation ul li {
+	font-size: 12px;
+	list-style: square;
+}
+
+/* Heading */
+div.heading {
+	border-bottom: 2px solid #d3d3d3;
+	margin-bottom: 15px;
+}
+
+div.heading h2 {
+	margin: 0;
+	padding: 5px 0 5px 0;
+	font-size: 200%; 
+	line-height: 100%;
+	font-weight: bold;
+}
+
+div.heading h3 {
+	margin: 0;
+	padding: 5px 0 5px 0;
+	font-size: 150%; 
+	line-height: 100%;
+	font-weight: bold;
+}
+
+/* Bike list */
+table.bikes-list {
+	border-collapse: separate;
+	border-spacing: 0 5px;
+}
+
+table.bikes-list table td {
+	padding: 5px;
+}
+
+.list-image {
+	vertical-align: middle;
+}
+
+.list-line-even {
+	background:   #ffffff;
+}
+
+.list-line-odd {
+	background:   #cee7ff;
+}
+
+/* Bike information */
+table.bike {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table.bike td.main {
+	width: 60%;
+	padding: 0;
+	vertical-align: top;
+	background-color: #ffffff;
+}
+
+table.bike td.sidebar {
+	width: 40%;
+	padding: 10px 10px;
+	vertical-align: top;
+	background-color: #ffc;
+}
+
+.show-image {
+	vertical-align: middle;
+	margin: 0 5px 0 0;
+}
+
+table.bike-info {
+	margin: 5px;
+	width: 98%;
+}
+
+table.bike-info td.item {
+	width: 30%;
+	background-color: #f5f5f5; 
+	vertical-align: top;
+	font-weight: bold;
+}
+
+table.bike-info td.separate {
+	width: 5%;
+	background-color: #f5f5f5; 
+	vertical-align: top;
+	font-weight: bold;
+}
+
+table.bike-info td.data {
+	width: 63%;
+	background-color: #f5f5f5; 
+	vertical-align: top;
+	font-style: italic;
+}
+
+table.component-info {
+	margin: 5px;
+	width: 98%;
+}
+
+table.component-info td.item {
+	width: 30%;
+	background-color: #f5f5f5; 
+	vertical-align: top;
+	font-weight: bold;
+}
+
+table.component-info td.separate {
+	width: 5%;
+	background-color: #f5f5f5; 
+	vertical-align: top;
+	font-weight: bold;
+}
+
+table.component-info td.summary {
+	width: 53%;
+	background-color: #f5f5f5; 
+	vertical-align: top;
+	font-style: italic;
+}
+
+table.component-info td.weight {
+	width: 10%;
+	background-color: #f5f5f5; 
+	vertical-align: top;
+	text-align: right;
+	font-style: italic;
+}
+
+table.component-info td.foot {
+	border-top: 2px #d3d3d3 solid;
+	background-color: #f5f5f5;
+}
+
+table.record-info tr {
+	height: 70px;
+}
+
+table.record-info tr td.record {
+	border-bottom: 1px solid #ccc;
+	vertical-align: top;
+	padding-top: 10px;
+	background-color: #ffc;
+}
+
+table.record-info tr td.button {
+	border-bottom: 1px solid #ccc;
+	background-color: #ffc;
+}
+
+table.record-info tr td.record span.timestamp {
+	display: block;
+	font-size: 85%;
+	color: #666;
+}
+
+/* Information box */
+div.section {
+	background-color: #f5f5f5; 
+	border: 1px #d3d3d3 solid;
+	display: block;
+	margin: 5px 5px 5px 0;
+	font-size: 100%;
+}
+
+div.section h3 {
+	margin: 0;
+	padding: 5px 10px;
+	background-color: #dcdcdc;
+	border-bottom: 1px #d3d3d3 solid;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+div.section p {
+	margin: 10px 10px;
+}
+
+/* Components list */
+table.components-list {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table.components-list thead th {
+	border-bottom: 2px #d3d3d3 solid;
+	text-align: left;
+	background-color: #ffffff;
+}
+
+table.components-list tr td {
+	width: 18%;
+	text-align: left;
+	background-color: #ffffff;
+}
+
+table.components-list tr td.button {
+	width: 10%;
+	background-color: #ffffff;
+}
+
+/* Components form */
+table.component-form {
+	border-collapse: collapse;
+	width: 90%;
+}
+
+table.component-form td {
+	width: 18%;
+}
+
+/* Users list */
+ul.users {
+	margin-top: 1em;
+}
+
+.users li {
+	list-style: none;
+	font-size: 150%; 
+}
+
+/* Records form */
+form.new_record {
+	margin-bottom: 2em;
+}
+
+form.new_record textarea {
+	height: 4em;
+	margin-bottom: 0;
+}
+
+table.records-list tr {
+	height: 70px;
+}
+
+table.records-list tr td.record {
+	border-bottom: 1px solid #ccc;
+	vertical-align: top;
+	padding-top: 10px;
+	background-color: #ffffff;
+	width: 90%;
+}
+
+table.records-list tr td.button {
+	border-bottom: 1px solid #ccc;
+	background-color: #ffffff;
+}
+
+table.records-list tr td.record span.timestamp {
+	display: block;
+	font-size: 85%;
+	color: #666;
+}
+
+/* Top page */
+table.top {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table.top td.main {
+	width: 60%;
+	padding: 0;
+	vertical-align: top;
+	background-color: #ffffff;
+}
+
+table.top td.sidebar {
+	width: 40%;
+	padding: 10px 10px;
+	vertical-align: top;
+	background-color: #ffc;
+}
+
+table.recently-bikes {
+	width: 100%;
+}
+
+table.recently-bikes td {
+	width: 12.5%;
+}

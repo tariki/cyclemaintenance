@@ -1,0 +1,18 @@
+<div class="heading">
+  <h2>Resend confirmation instructions</h2>
+</div>
+
+<% form_for resource_name, resource, :url => confirmation_path(resource_name) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Resend confirmation instructions" %>
+  </div>
+<% end %>
+
+<%= render :partial => "shared/devise_links" %>

@@ -1,0 +1,22 @@
+<div class="heading">
+  <h2><%= bike_info(@bike) %></h2>
+</div>
+
+<table class="bike">
+  <tr>
+    <td class="main">
+      <%= image_tag screen_bike_path(@bike, :jpg), :class => "show-image"  %>
+      <%= render "basic_info" %>
+      <%= render "components_info" %>
+    </td>
+    <td class="sidebar round">
+      <%= render "records" %>
+    </td>
+  </tr>
+</table>
+
+<% if current_user?(@bike.user) %>
+  <%= link_to "Edit basic infomation", edit_bike_path(@bike), :class => "edit_button round" %>
+  <%= link_to "Edit components", new_bike_component_path(@bike), :class => "edit_button round" %>
+  <%= link_to "Edit maintenance records", new_bike_record_path(@bike), :class => "edit_button round" %>
+<% end %>

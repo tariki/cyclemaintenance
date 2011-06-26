@@ -1,0 +1,16 @@
+<div class="heading">
+  <h2>All users</h2>
+</div>
+
+<ul class="users">
+  <%= will_paginate(@users) %>
+  <% @users.each do |user| %>
+    <li>
+    <%= link_to user.username, user %>
+    <% if current_user.admin? %>
+    | <%= link_to "delete", user, :confirm => "Are you sure?", :method => :delete %>
+    <% end %>
+    </li>
+  <% end %>
+</ul>
+

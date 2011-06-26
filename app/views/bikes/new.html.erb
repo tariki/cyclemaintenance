@@ -1,0 +1,28 @@
+<div class="heading">
+  <h2>New bike</h2>
+</div>
+
+<% form_for(@bike, :html => {:multipart => true}) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="field">
+    <%= f.label :manufacturer %><br />
+    <%= f.text_field :manufacturer %>
+  </div>
+  <div class="field">
+    <%= f.label :model_name %><br />
+    <%= f.text_field :model_name %>
+  </div>
+  <div class="field">
+    <%= f.label :frame_number %><br />
+    <%= f.text_field :frame_number %>
+  </div>
+  <div class="field">
+    <%= f.label :image_file %><br />
+    <%= f.file_field :image_file %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Register' %>
+  </div>
+<% end %>

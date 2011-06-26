@@ -1,0 +1,24 @@
+<div class="section">
+  <h3>Components information</h3>
+  <table class="component-info">
+    <% if @components.empty? %>
+      <p>
+        No components are registered.
+      </p>
+    <% else %>
+      <% @components.each do |component| %>
+        <tr>
+          <td class="item"><%= component.item %></td>
+          <td class="separate">:</td>
+          <td class="summary"><%= component_info(component) %></td>
+          <td class="weight"><%= component_weight(component) %> g</td>
+        </tr>
+      <% end %>
+      <tr>
+        <td class="item foot">Total weight</td>
+        <td class="separate foot">:</td>
+        <td class="weight foot" colspan="2"><%= @total_weight %> g</td>
+      </tr>
+    <% end %>
+  </table>
+</div>

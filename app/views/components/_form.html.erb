@@ -1,0 +1,32 @@
+<% form_for([@bike, @component]) do |f| %>
+  <%= f.error_messages %>
+
+  <table class="component-form">
+    <tr>
+      <td>
+        <%= f.label :item %><br />
+        <%= f.select :item, Component.item_select, :include_blank => true %><br />
+      </td>
+      <td>
+        <%= f.label :manufacturer %><br />
+        <%= f.text_field :manufacturer, :size => "20" %>
+      </td>
+      <td>
+        <%= f.label :group_name %><br />
+        <%= f.text_field :group_name, :size => "20" %>
+      </td>
+      <td>
+        <%= f.label :model_name %><br />
+        <%= f.text_field :model_name, :size => "20" %>
+      </td>
+      <td colspan="2">
+        <%= f.label :weight %> <i>(gram)</i><br />
+        <%= f.text_field :weight, :size => "20" %>
+      </td>
+    </tr>
+  </table>
+
+  <div class="actions">
+    <%= f.submit 'Register' %>
+  </div>
+<% end %>

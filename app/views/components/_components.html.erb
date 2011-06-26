@@ -1,0 +1,25 @@
+<table class="components-list">
+  <% if @components.empty? %>
+    No components are registered.
+  <% else %>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Manufacturer</th>
+        <th>Group name</th>
+        <th>Model name</th>
+        <th colspan="2">Weight <i>(gram)</i></th>
+      </tr>
+    </thead>
+    <% @components.each do |component| %>
+      <tr>
+        <td><%= component.item %></td>
+        <td><%= component.manufacturer %></td>
+        <td><%= component_group_name(component) %></td>
+        <td><%= component_model_name(component) %></td>
+        <td><%= component_weight(component) %></td>
+        <td class="button"><%= link_to "Delete", bike_component_path(@bike, component), :confirm => "Are you sure?", :method => :delete, :class => "edit_button round" %></td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>

@@ -1,0 +1,20 @@
+<table class="records-list">
+  <% if @records.empty? %>
+    No maintenance records.
+  <% else %>
+    <%= will_paginate(@records) %>
+    <% @records.each do |record| %>
+      <tr>
+        <td class="record">
+          <span class="content"><%= record.content %></span>
+          <span class="timestamp"><%= record.maintain_at %></span>
+        </td>
+        <td class="button">
+          <%= link_to "Delete", bike_record_path(@bike, record), :confirm => "Are you sure?", :method => :delete, :class => "edit_button 
+round" %>
+        </td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+

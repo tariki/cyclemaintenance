@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  maintain_at: 2011-04-19
+  content: MyString
+  bike_id: 1
+
+two:
+  maintain_at: 2011-04-19
+  content: MyString
+  bike_id: 1

@@ -1,0 +1,13 @@
+<table class="bikes-list">
+  <%= will_paginate(@bikes) %>
+  <% @bikes.each do |bike| %>
+    <tr class="<%= cycle("list-line-odd", "list-line-even") %>">
+      <td><%= image_tag thumbnail_bike_path(bike, :jpg), :class => "list-image" %></td>
+      <td><%= bike_info(bike) %></td>
+      <td><%= link_to "Show details", bike, :class => "edit_button round" %></td>
+      <% if current_user?(bike.user) %>
+        <td><%= link_to "Delete bike", bike, :confirm => "Are you sure?", :method => :delete, :class => "edit_button round" %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table> 

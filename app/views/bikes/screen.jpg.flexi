@@ -1,0 +1,3 @@
+@bike.operate do |image|
+  image.resize('560x420', :crop => true)
+end

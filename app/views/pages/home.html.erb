@@ -1,0 +1,29 @@
+<div class="heading">
+  <h2>Welcome to CycleMaintenance.JP!</h2>
+</div>
+
+<table class="top">
+  <tr>
+    <td class="main">
+      <% if @bikes.empty? %>
+        <%= link_to racer, root_path %>
+      <% else %>
+        <%= link_to image_tag(screen_bike_path(@bikes[0], :jpg), :class => "show-image"), @bikes[0] %>
+      <% end %>
+    </td>
+    <td class="sidebar round">
+      <p>
+        <strong>CycleMaintenance.JP</strong>は、自転車の日々のメンテナンス内容を記録するためのサービス
+        です。あなたの所有する自転車を登録して、自転車ライフを楽しんでください！
+      </p>
+      <center>
+        <%= link_to "Sign up now!", new_user_registration_path, :class => "signup_button round" %>
+      </center>
+    </td>
+  </tr>
+</table>
+
+<% if !@bikes.empty? %>
+  <%= render "bikes" %>
+<% end %>
+

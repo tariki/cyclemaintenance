@@ -1,0 +1,15 @@
+<div class="heading">
+  <h2><%= @user.username%>'s bikes</h2>
+</div>
+
+<% if @bikes.empty? %>
+  <p>
+    No bike are registered.
+  </p>
+<% else %>
+  <%= render "bikes" %>
+<% end %>
+  
+<% if current_user?(@user) %>
+  <%= link_to "Register your bike", new_bike_path, :class => "edit_button round" %>
+<% end %>

@@ -1,0 +1,15 @@
+<% form_for([@bike, @record]) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="field">
+    <%= f.date_select :maintain_at %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :content %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Register' %>
+  </div>
+<% end %>

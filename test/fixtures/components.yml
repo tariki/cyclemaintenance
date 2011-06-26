@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  item: MyString
+  manufacturer: MyString
+  group_name: MyString
+  model_name: MyString
+  weight: 1
+  bike_id: 1
+
+two:
+  item: MyString
+  manufacturer: MyString
+  group_name: MyString
+  model_name: MyString
+  weight: 1
+  bike_id: 1

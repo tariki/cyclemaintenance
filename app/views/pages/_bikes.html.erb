@@ -1,0 +1,15 @@
+<div class="heading">
+  <h2>Bikes registered recently!</h2>
+</div>
+
+<table class="recently-bikes">
+  <tr>
+    <% for i in 0..7 %>
+      <% if @bikes[i].nil? %>
+        <td></td>
+      <% else %>
+        <td><%= link_to image_tag(thumbnail_bike_path(@bikes[i], :jpg), :class => "list-image"), @bikes[i] %></td>
+      <% end %>
+    <% end %>
+  </tr>
+</table> 

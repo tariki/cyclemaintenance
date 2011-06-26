@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  manufacturer: MyString
+  model_name: MyString
+  frame_number: MyString
+  user_id: 1
+  image_filename: MyString
+  image_width: 1
+  image_height: 1
+
+two:
+  manufacturer: MyString
+  model_name: MyString
+  frame_number: MyString
+  user_id: 1
+  image_filename: MyString
+  image_width: 1
+  image_height: 1
