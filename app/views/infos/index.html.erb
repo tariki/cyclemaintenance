@@ -1,0 +1,12 @@
+<div class="heading">
+  <h2>New informations</h2>
+</div>
+
+<%= render "infos" %>
+
+<% if user_signed_in? %>
+  <% if current_user.admin? %>
+    <%= link_to "Register a new info", new_info_path, :class => "edit_button round" %>
+  <% end %>
+<% end %>
+

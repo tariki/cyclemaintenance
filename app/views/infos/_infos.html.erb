@@ -1,0 +1,24 @@
+<table class="infos-list">
+  <% if @infos.empty? %>
+    No informations.
+  <% else %>
+    <%= will_paginate(@infos) %>
+    <% @infos.each do |info| %>
+      <tr>
+        <td class="entry">
+          <span class="title"><%= info.title %></span>
+          <span class="content"><%= info.content %></span>
+          <span class="timestamp"><%= info.updated_at %></span>
+        </td>
+        <td class="button">
+          <% if user_signed_in? %>
+            <% if current_user.admin? %>
+              <%= link_to "Delete", info, :confirm => "Are you sure?", :method => :delete, :class => "edit_button round" %>
+            <% end %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+

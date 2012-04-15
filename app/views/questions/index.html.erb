@@ -1,0 +1,12 @@
+<div class="heading">
+  <h2>FAQ</h2>
+</div>
+
+<%= render "questions" %>
+
+<% if user_signed_in? %>
+  <% if current_user.admin? %>
+    <%= link_to "Register a new faq", new_question_path, :class => "edit_button round" %>
+  <% end %>
+<% end %>
+

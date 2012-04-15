@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110419020634) do
+ActiveRecord::Schema.define(:version => 20120415050010) do
 
   create_table "bikes", :force => true do |t|
     t.string   "manufacturer"
@@ -37,6 +37,20 @@ ActiveRecord::Schema.define(:version => 20110419020634) do
   end
 
   add_index "components", ["bike_id"], :name => "index_components_on_bike_id"
+
+  create_table "infos", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "records", :force => true do |t|
     t.date     "maintain_at"

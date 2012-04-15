@@ -5,10 +5,10 @@ ActionController::Routing::Routes.draw do |map|
     bike.resources  :components, :only => [ 'new', 'create', 'destroy' ]
     bike.resources  :records, :only => [ 'new', 'create', 'destroy' ]
   end
-  map.help       '/help',    :controller => 'pages', :action => 'help'
+  map.resources  :infos, :only => [ 'index', 'new', 'create', 'destroy' ]
+  map.resources  :questions, :only => [ 'index', 'new', 'create', 'destroy' ]
   map.about      '/about',   :controller => 'pages', :action => 'about'
   map.contact    '/contact', :controller => 'pages', :action => 'contact'
-  map.news       '/news',    :controller => 'pages', :action => 'news'
   map.terms      '/terms',   :controller => 'pages', :action => 'terms'
   
   # The priority is based upon order of creation: first created -> highest priority.

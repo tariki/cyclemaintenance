@@ -7,3 +7,4 @@ tmp/*
 *.swp
 *~
 .DS_Store
+public/images/uploaded

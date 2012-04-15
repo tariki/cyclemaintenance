@@ -389,16 +389,7 @@ ul.users {
 	font-size: 150%; 
 }
 
-/* Records form */
-form.new_record {
-	margin-bottom: 2em;
-}
-
-form.new_record textarea {
-	height: 4em;
-	margin-bottom: 0;
-}
-
+/* Records list */
 table.records-list tr {
 	height: 70px;
 }
@@ -421,6 +412,17 @@ table.records-list tr td.record span.timestamp {
 	font-size: 85%;
 	color: #666;
 }
+
+/* Records form */
+form.new_record {
+	margin-bottom: 2em;
+}
+
+form.new_record textarea {
+	height: 4em;
+	margin-bottom: 0;
+}
+
 
 /* Top page */
 table.top {
@@ -449,3 +451,84 @@ table.recently-bikes {
 table.recently-bikes td {
 	width: 12.5%;
 }
+
+/* Infos list */
+table.infos-list tr {
+	height: 70px;
+}
+
+table.infos-list tr td.entry {
+	border-bottom: 1px solid #ccc;
+	vertical-align: top;
+	padding-top: 10px;
+	background-color: #ffffff;
+	width: 90%;
+}
+
+table.infos-list tr td.button {
+	border-bottom: 1px solid #ccc;
+	background-color: #ffffff;
+}
+
+table.infos-list tr td.entry span.title {
+	display: block;
+	font-size: 150%;
+	font-weight: bold;
+}
+
+table.infos-list tr td.entry span.timestamp {
+	display: block;
+	font-size: 85%;
+	color: #666;
+}
+
+/* Infos form */
+form.new_info {
+	margin-bottom: 2em;
+}
+
+form.new_info textarea {
+	height: 15em;
+	margin-bottom: 0;
+}
+
+/* Questions list */
+table.questions-list tr {
+	height: 70px;
+}
+
+table.questions-list tr td.entry {
+	border-bottom: 1px solid #ccc;
+	vertical-align: top;
+	padding-top: 10px;
+	background-color: #ffffff;
+	width: 90%;
+}
+
+table.questions-list tr td.button {
+	border-bottom: 1px solid #ccc;
+	background-color: #ffffff;
+}
+
+table.questions-list tr td.entry span.title {
+	display: block;
+	font-size: 150%;
+	font-weight: bold;
+}
+
+table.questions-list tr td.entry span.timestamp {
+	display: block;
+	font-size: 85%;
+	color: #666;
+}
+
+/* Questions form */
+form.new_question {
+	margin-bottom: 2em;
+}
+
+form.new_question textarea {
+	height: 15em;
+	margin-bottom: 0;
+}
+

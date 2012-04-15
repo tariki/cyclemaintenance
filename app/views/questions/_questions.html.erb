@@ -1,0 +1,24 @@
+<table class="questions-list">
+  <% if @questions.empty? %>
+    No FAQ.
+  <% else %>
+    <%= will_paginate(@questions) %>
+    <% @questions.each do |question| %>
+      <tr>
+        <td class="entry">
+          <span class="title"><%= question.title %></span>
+          <span class="content"><%= question.content %></span>
+          <span class="timestamp"><%= question.updated_at %></span>
+        </td>
+        <td class="button">
+          <% if user_signed_in? %>
+            <% if current_user.admin? %>
+              <%= link_to "Delete", question, :confirm => "Are you sure?", :method => :delete, :class => "edit_button round" %>
+            <% end %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+
