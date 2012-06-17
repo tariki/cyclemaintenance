@@ -381,7 +381,7 @@ module Fleximage
       def image_file_url=(file_url)
         @image_file_url = file_url
         if file_url =~ %r{^(https?|ftp)://}
-          file = open(file_url)
+          file = open(URI.parse(URI.encode(file_url)))
           
           # Force a URL based file to have an original_filename
           eval <<-CODE

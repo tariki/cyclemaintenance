@@ -1,56 +1,20 @@
-ActionController::Routing::Routes.draw do |map|
-  map.devise_for :users 
-  map.resources  :users, :only => [ 'index', 'show', 'destroy' ]
-  map.resources  :bikes, :only => [ 'new', 'show', 'create', 'edit', 'update', 'destroy' ], :member => { :thumbnail => :get, :screen => :get } do |bike|
-    bike.resources  :components, :only => [ 'new', 'create', 'destroy' ]
-    bike.resources  :records, :only => [ 'new', 'create', 'destroy' ]
+Cyclemaintenance::Application.routes.draw do
+  devise_for :users 
+  resources :users, :only => ["index", "show", "destroy"]
+  resources :bikes, :only => ["new", "show", "create", "edit", "update", "destroy"] do
+    member do
+      get :screen
+      get :thumbnail
+    end
+    resources :components, :only => ["new", "create", "destroy"]
+    resources :records, :only => ["new", "create", "destroy"]
   end
-  map.resources  :infos, :only => [ 'index', 'new', 'create', 'destroy' ]
-  map.resources  :questions, :only => [ 'index', 'new', 'create', 'destroy' ]
-  map.about      '/about',   :controller => 'pages', :action => 'about'
-  map.contact    '/contact', :controller => 'pages', :action => 'contact'
-  map.terms      '/terms',   :controller => 'pages', :action => 'terms'
-  
-  # The priority is based upon order of creation: first created -> highest priority.
 
-  # Sample of regular route:
-  #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
-  # Keep in mind you can assign values other than :controller and :action
-
-  # Sample of named route:
-  #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   map.resources :products
-
-  # Sample resource route with options:
-  #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
-
-  # Sample resource route with sub-resources:
-  #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-  
-  # Sample resource route with more complex sub-resources
-  #   map.resources :products do |products|
-  #     products.resources :comments
-  #     products.resources :sales, :collection => { :recent => :get }
-  #   end
-
-  # Sample resource route within a namespace:
-  #   map.namespace :admin do |admin|
-  #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)
-  #     admin.resources :products
-  #   end
-
-  # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  # map.root :controller => "welcome"
-  map.root :controller => 'pages', :action => 'home'
-
-  # See how all your routes lay out with "rake routes"
-
-  # Install the default routes as the lowest priority.
-  # Note: These default routes make all actions in every controller accessible via GET requests. You should
-  # consider removing or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  resources :infos, :only => ["index", "new", "create", "destroy"]
+  resources :questions, :only => ["index", "new", "create", "destroy"]
+  match '/about' => 'pages#about', :as => :about
+  match '/contact' => 'pages#contact', :as => :contact
+  match '/terms' => 'pages#terms', :as => :terms
+  root :to => "pages#home"
+  match '/:controller(/:action(/:id))'
 end

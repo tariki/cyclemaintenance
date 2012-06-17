@@ -4,7 +4,7 @@ class PagesController < ApplicationController
     if user_signed_in?
       redirect_to current_user
     end
-    @bikes = Bike.find(:all, :limit => 8, :order => "created_at DESC")
+    @bikes = Bike.limit(8).order("created_at DESC");
   end
 
   def help
