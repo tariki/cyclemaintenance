@@ -28,14 +28,14 @@ module Fleximage
       
       # Raise an error if object returned from template is not an image record
       unless result.class.include?(Fleximage::Model::InstanceMethods)
-        raise TemplateDidNotReturnImage, 
+        raise TemplateDidNotReturnImage,
                 ".flexi template was expected to return a model instance that acts_as_fleximage, but got an instance of <#{result.class}> instead."
       end
       
       # Figure out the proper format
       requested_format = (@view.params[:format] || :jpg).to_sym
       unless [:jpg, :gif, :png].include?(requested_format)
-        raise 'Image must be requested with an image type format.  jpg, gif and png only are supported.'
+        raise 'Image must be requested with an image type format. jpg, gif and png only are supported.'
       end
       
       # Set proper content type
